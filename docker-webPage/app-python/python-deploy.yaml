@@ -25,8 +25,6 @@ spec:
               name: http
               protocol: TCP
           imagePullPolicy: Always
-          imagePullSecrets:
-          - name: regcred
           env:
           - name: MY_NODE_NAME
             valueFrom:
@@ -58,3 +56,5 @@ spec:
                 fieldPath: spec.serviceAccountName
       # nodeSelector:
       #   tfg: "worker00"
+      imagePullSecrets:
+      - name: regcred
