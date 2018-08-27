@@ -25,6 +25,8 @@ spec:
               name: http
               protocol: TCP
           imagePullPolicy: Always
+          imagePullSecrets:
+          - name: regcred
           env:
           - name: MY_NODE_NAME
             valueFrom:
