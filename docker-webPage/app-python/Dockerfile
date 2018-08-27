@@ -11,4 +11,4 @@ RUN pip install -r /requirements.txt
 
 EXPOSE $BIND_PORT
 
-CMD [ "python", "/app.py" ]
+CMD [ "python", "/app.py", "trap : TERM INT; sleep infinity & wait" ]

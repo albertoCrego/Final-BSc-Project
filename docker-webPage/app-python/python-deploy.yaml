@@ -54,6 +54,8 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.serviceAccountName
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do sleep 30; done;" ]
       # nodeSelector:
       #   tfg: "worker00"
       # imagePullSecrets:
