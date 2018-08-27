@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
         - name: flask-python
-          image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
-          #image: xiaopeng163/docker-flask-demo:1.0
+          #image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
+          image: app-python:0.5
           ports:
             - containerPort: 5000
               name: http
