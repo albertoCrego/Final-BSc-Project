@@ -18,8 +18,8 @@ spec:
       containers:
         - name: flask-python
           #image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
-          image: appy-python:1.0
-          #image: acrego/app-python
+          #image: appy-python:1.0
+          image: acrego/app-python
           ports:
             - containerPort: 5000
               name: http
