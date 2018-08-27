@@ -20,7 +20,7 @@ spec:
           #image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
           #image: appy-python:1.0
           image: acrego/app-python:latest
-          command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
+          #command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
           ports:
             - containerPort: 5000
               name: http
@@ -55,7 +55,6 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.serviceAccountName
-
       # nodeSelector:
       #   tfg: "worker00"
       # imagePullSecrets:
