@@ -34,5 +34,5 @@ spec:
         - name: config-volume
           configMap:
             name: nginx-conf
-      nodeSelector:
-        tfg: "worker00"
+      # nodeSelector:
+      #   tfg: "worker00"
