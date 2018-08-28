@@ -1,5 +1,5 @@
 #FROM python:3.7.0-slim-stretch
-FROM arm32v7/python:3.7.0-stretch
+FROM arm32v7/python:3.7.0-slim-stretch
 
 RUN pip install -U pip
 RUN pip install pipenv
