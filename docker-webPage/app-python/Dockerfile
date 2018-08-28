@@ -1,9 +1,6 @@
 #FROM python:3.7.0-slim-stretch
 FROM arm32v7/python:3.7.0-slim-stretch
 
-RUN pip install -U pip
-RUN pip install pipenv
-
 ENV BIND_PORT 5000
 ENV REDIS_HOST redis.default
 ENV REDIS_PORT 6379
