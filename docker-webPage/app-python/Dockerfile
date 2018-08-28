@@ -1,5 +1,8 @@
 #FROM python:3.7.0-slim-stretch
-FROM arm32v7/python:3.7.0-slim-stretch
+FROM arm32v7/python:3.7.0-stretch
+
+RUN pip install -U pip
+RUN pip install pipenv
 
 ENV BIND_PORT 5000
 ENV REDIS_HOST redis.default
@@ -11,6 +14,8 @@ COPY ./app.py /app.py
 #RUN pip install -r /requirements.txt
 #RUN pip install flask
 
+RUN pipenv install --system
+
 EXPOSE $BIND_PORT
 
-CMD [ "python", "/app.py", "trap : TERM INT; sleep infinity & wait" ]
+CMD [ "python3", "/app.py" ]
