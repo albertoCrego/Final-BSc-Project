@@ -13,8 +13,7 @@ COUNTGET = []
 def increment(url):
     print url
     global COUNTGET
- #   COUNTGET.append('==>'.join([url, os.environ['HOME']]))
-    COUNTGET.append('==>'.join([url,port]))
+    COUNTGET.append('==>'.join([url, os.environ['spec.nodeName']]))
 
 def printit():
   threading.Timer(5.0, printit).start()
@@ -104,9 +103,6 @@ class HttpRequestCapture(object):
 
 
 if __name__ == "__main__":
-    
-    global port
-    
     from argparse import ArgumentParser
     parser = ArgumentParser()
     # get args from cli
