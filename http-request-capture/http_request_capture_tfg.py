@@ -13,7 +13,7 @@ COUNTGET = []
 def increment(url):
     print url
     global COUNTGET
-    COUNTGET.append('==>'.join([url, os.environ['spec.nodeName']]))
+    COUNTGET.append('==>'.join([url, os.environ['HOME']]))
 
 def printit():
   threading.Timer(5.0, printit).start()
