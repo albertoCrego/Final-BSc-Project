@@ -14,7 +14,7 @@ def increment(url):
     print url
     global COUNTGET
  #   COUNTGET.append('==>'.join([url, os.environ['HOME']]))
-    COUNTGET.append('==>'.join([url,port))
+    COUNTGET.append('==>'.join([url,port]))
 
 def printit():
   threading.Timer(5.0, printit).start()
