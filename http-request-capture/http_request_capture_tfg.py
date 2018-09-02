@@ -1,34 +1,29 @@
 #!/usr/bin/env python
 # --*--coding: utf-8 --*--
 
+import os
 import time
 import threading
 from datetime import datetime
 from scapy.all import TCP, IP, sniff, Raw
 from logger import log
 
-#COUNTGET = 0
 COUNTGET = []
 
 def increment(url):
     print url
     global COUNTGET
-    #COUNTGET = COUNTGET+1
-    COUNTGET += url
+    COUNTGET.append('==>'.join([url, os.environ['HOME']]))
 
 def printit():
   threading.Timer(5.0, printit).start()
 
-  # if (COUNTGET > 5):
-  #   print "Numero de GETs  > 5"
-  #   print COUNTGET
-  # else:
-  #   print "NUmero de GETS < 5 \n RESET"
-  if (len(COUNTGET) != 0):
-    print COUNTGET[0]
+  if (len(COUNTGET) == 0):
+    print "Lista vacia"
   else:
-#    print "Lista vacia"
-    print COUNTGET.count('159.122.175.146:31481/get-ip')
+    #print COUNTGET.count('159.122.175.146:31481/get-ip')
+    print(COUNTGET[0])
+
 
 
 
