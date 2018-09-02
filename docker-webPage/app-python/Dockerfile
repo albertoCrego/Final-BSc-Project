@@ -8,7 +8,7 @@ ENV BIND_PORT 5000
 ENV REDIS_HOST redis.default
 ENV REDIS_PORT 6379
 
-COPY ./requirements.txt /requirements.txt
+#COPY ./requirements.txt /requirements.txt
 COPY ./app.py /app.py
 
 #RUN pip install -r /requirements.txt
