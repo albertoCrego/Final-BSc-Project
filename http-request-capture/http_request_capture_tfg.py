@@ -22,17 +22,11 @@ def printit():
   if (len(COUNTGET) == 0):
     print "Lista vacia"
   else:
-    # print "192.168.31.112:30080/get-ip: "
-    # print COUNTGET.count('192.168.31.112:30080/get-ip')
-    # print "192.168.31.232:30080/get-ip: "
-    # print COUNTGET.count('192.168.31.232:30080/get-ip')
-    # print "192.168.31.102:30080/get-ip: "
-    # print COUNTGET.count('192.168.31.102:30080/get-ip')
-    if (COUNTGET.count('192.168.31.112:30080/get-ip'))
+    if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         comando2worker00 = "sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"
         result00 = os.system(comando2worker00)
         print("Resultado:", result00)
-    if (COUNTGET.count('192.168.31.102:30080/get-ip'))
+    if (COUNTGET.count('192.168.31.102:30080/get-ip')):
         comando2worker01 = "sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"
         result01 = os.system(comando2worker01)
         print("Resultado:", result01)
