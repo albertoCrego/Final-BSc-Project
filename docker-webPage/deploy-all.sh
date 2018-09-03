@@ -23,3 +23,8 @@ echo "Importando configmap..."
 cd nginx
 kubectl create configmap nginx-conf --from-file=configure-pod/nginx.conf
 kubectl create configmap www-nginx --from-file=www/ 
+
+
+echo "Etiquetando nodos"
+kubectl label nodes worker00-desktop tfg=worker00
+kubectl label nodes worker01-desktop tfg=worker01
