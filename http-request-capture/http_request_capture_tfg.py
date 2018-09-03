@@ -22,8 +22,13 @@ def printit():
   if (len(COUNTGET) == 0):
     print "Lista vacia"
   else:
-    #print COUNTGET.count('159.122.175.146:31481/get-ip')
-    print(COUNTGET[0])
+    print "192.168.31.112:30080/get-ip: "
+    print COUNTGET.count('192.168.31.112:30080/get-ip')
+    print "192.168.31.232:30080/get-ip: "
+    print COUNTGET.count('192.168.31.232:30080/get-ip')
+    print "192.168.31.102:30080/get-ip: "
+    print COUNTGET.count('192.168.31.102:30080/get-ip')
+    #print(COUNTGET[0])
 
 
 
