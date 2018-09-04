@@ -23,13 +23,15 @@ def printit():
   if (len(COUNTGET) == 0):
     print "Lista vacia"
   else:
-    if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
-        del COUNTGET[:]
-        subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
+    # if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
+    #     del COUNTGET[:]
+    #     subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
 
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         del COUNTGET[:]
         subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker01.sh'", shell=True)
+    else:
+        del COUNTGET[:]
 
 class HttpRequestCapture(object):
     def __init__(self, port=80, iface='en0', filter='tcp'):
