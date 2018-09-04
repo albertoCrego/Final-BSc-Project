@@ -4,6 +4,7 @@
 import os
 import time
 import threading
+import subprocess
 from datetime import datetime
 from scapy.all import TCP, IP, sniff, Raw
 from logger import log
@@ -24,10 +25,11 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         print "Desplazando pods worker00"
-        os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh")
+        #os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh")
+        subprocess.call(["sshpass", "-p", "'raspberry'", "ssh", "pi@192.168.31.232", "'bash -s'" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"])
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         print "Desplazando pods worker01"
-        os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh")
+        subprocess.call(["sshpass", "-p", "'raspberry'", "ssh", "pi@192.168.31.232", "'bash -s'" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"])
 
 
 
