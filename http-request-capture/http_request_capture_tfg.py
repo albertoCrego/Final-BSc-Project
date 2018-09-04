@@ -4,7 +4,7 @@
 import os
 import time
 import threading
-import subprocess
+from subprocess import Popen,PIPE,STDOUT,call
 from datetime import datetime
 from scapy.all import TCP, IP, sniff, Raw
 from logger import log
@@ -25,11 +25,17 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         print "aaaa"
-        os.popen("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh").read()
         #os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh")
+        os.system("ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'")
         #subprocess.call(["sshpass", "-p", "raspberry", "ssh", "pi@192.168.31.232", "bash", "-s" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"])
         #os.system("sshpass -p \'raspberry\'ssh pi@192.168.31.232  \'./home/pi/tfg_project/nodeSelector/move2worker00.sh\'")
         del COUNTGET[:]
+        #proc = subprocess.Popen('ssh pi@192.168.31.232 \'./tfg_project/nodeSelector/move2worker00.sh\'',shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,)
+        #stdout_value, stderr_value = proc.communicate('through stdin to stdout\n')
+        #print '\tcombined output:', repr(stdout_value)
+        #print '\tstderr value   :', repr(stderr_value)
+
+
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         print "bbb"
         #subprocess.call(["sshpass", "-p", "'raspberry'", "ssh", "pi@192.168.31.232", "'bash -s'" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"])
