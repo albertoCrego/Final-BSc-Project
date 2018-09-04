@@ -31,9 +31,9 @@ def printit():
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         print "bbbb"
         print COUNTGET.count('192.168.31.102:30080/get-ip')
-        # comando2worker01 = "sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"
-        # result01 = os.system(comando2worker01)
-        # print("Resultado:", result01)
+        comando2worker01 = "sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"
+        result01 = os.system(comando2worker01)
+        print("Resultado:", result01)
 
 
 
