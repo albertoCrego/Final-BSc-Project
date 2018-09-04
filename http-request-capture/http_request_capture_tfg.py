@@ -26,12 +26,14 @@ def printit():
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         print "aaaa"
         os.system('sshpass -p \'raspberry\' ssh pi@192.168.31.232 \'bash -s\' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh')
-        #subprocess.call(["sshpass", "-p", "'raspberry'", "ssh", "pi@192.168.31.232", "'bash -s'" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"])
+        #subprocess.call(["sshpass", "-p", "raspberry", "ssh", "pi@192.168.31.232", "bash", "-s" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"])
         #os.system("sshpass -p \'raspberry\'ssh pi@192.168.31.232  \'./home/pi/tfg_project/nodeSelector/move2worker00.sh\'")
+        del COUNTGET[:]
+        time.sleep( 5 )
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         print "bbb"
         #subprocess.call(["sshpass", "-p", "'raspberry'", "ssh", "pi@192.168.31.232", "'bash -s'" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh"])
-        os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh")
+        #os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker01.sh")
 
 
 
