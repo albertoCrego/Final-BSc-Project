@@ -26,7 +26,7 @@ def printit():
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         del COUNTGET[:]
         subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
-    else
+    else:
         del COUNTGET[:]        
 
     # if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
