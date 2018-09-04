@@ -28,6 +28,7 @@ def printit():
         #os.system("sshpass -p 'raspberry' ssh pi@192.168.31.232 'bash -s' < /home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh")
         os.system("ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'")
         #subprocess.call(["sshpass", "-p", "raspberry", "ssh", "pi@192.168.31.232", "bash", "-s" , "<", "/home/worker00/Documents/tfg_project/nodeSelector/move2worker00.sh"])
+        subprocess.call(["ssh", "pi@192.168.31.232", "'./tfg_project/nodeSelector/move2worker00.sh'"])
         #os.system("sshpass -p \'raspberry\'ssh pi@192.168.31.232  \'./home/pi/tfg_project/nodeSelector/move2worker00.sh\'")
         del COUNTGET[:]
         #proc = subprocess.Popen('ssh pi@192.168.31.232 \'./tfg_project/nodeSelector/move2worker00.sh\'',shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,)
