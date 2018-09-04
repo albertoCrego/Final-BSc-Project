@@ -13,8 +13,22 @@
 }
 
 .pod {
-  width: 150px;
+  width: 100px;
   background-color:#eeeeef;
+}
+
+.pending {
+  background-color:yellow;
+}
+
+.window {
+  line-height: 1em;
+  display: table;
+}
+
+.window span {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .logo {
@@ -26,6 +40,7 @@
 
 .navbar-logo {
   margin-left: 10px;
+  margin-top: 5px;
   text-align: left;
 }
 
@@ -34,27 +49,29 @@
 }
 
 .navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
   background-color: #447AE8;
   border: 0px;
   border-radius: 0;
 }
 
-.window span {
-  vertical-align: middle;
+.nodesbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    height: 200px;
+    background-color: light-grey;
+    border-bottom: thick solid black;
 }
 
-#main {
-  margin-top: 0;
-  width: auto;
-  height: 100%;
-  max-width: none;
-  max-height: none;
+.not_ready {
+  background-color: red;
 }
 
-.demo {
-  position: absolute;
-  top: 42px;
-  bottom: 0;
-  height: auto;
-  margin-bottom: 0;
+.terminating {
+  background-color: red;
 }
