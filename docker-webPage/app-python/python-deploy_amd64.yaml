@@ -17,18 +17,18 @@ spec:
     spec:
       containers:
         - name: flask-python
-          #image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
+          image: registry.eu-gb.bluemix.net/acrego/app-python:0.5
           #image: appy-python:1.0
           #image: acrego/app-python:latest
-          image: acrego/app-python-arm32:1.0
+          #image: acrego/app-python-arm32:1.0
           #command: [ "/bin/bash", "-ce", "tail -f /dev/null" ]
-          # resources:
-          #   requests:
-          #     memory: "64Mi"
-          #     cpu: "250m"
-          #   limits:
-          #     memory: "256Mi"
-          #     cpu: "400m"    
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "400m"    
           ports:
             - containerPort: 5000
               name: http
@@ -63,5 +63,5 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.serviceAccountName
-      nodeSelector:
-        tfg: "worker00"
+      # nodeSelector:
+      #   tfg: "worker00"
