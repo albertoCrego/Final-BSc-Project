@@ -23,15 +23,13 @@ def printit():
   if (len(COUNTGET) == 0):
     print "Lista vacia"
   else:
-    # if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
-    #     del COUNTGET[:]
-    #     subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
-
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         del COUNTGET[:]
         print "bbb"
-        subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker01.sh'", shell=True)
-        #subprocess.call("ssh pi@192.168.31.232 './tfg_project/nodeSelector/move2worker01.sh'", shell=True)
+        #subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker01.sh'", shell=True)
+        subprocess.call("ssh StrictHostKeyChecking=no pi@192.168.31.232  './tfg_project/nodeSelector/move2worker01.sh'", shell=True)StrictHostKeyChecking=no 
+    # if (COUNTGET.count('192.168.31.102:30080/get-ip') > 10):
+        
     else:
         del COUNTGET[:]
 

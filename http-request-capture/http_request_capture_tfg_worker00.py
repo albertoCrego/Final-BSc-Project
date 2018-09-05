@@ -25,13 +25,10 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         del COUNTGET[:]
-        subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
+        #subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker00.sh'", shell=True)
+        subprocess.call("ssh StrictHostKeyChecking=no pi@192.168.31.232  './tfg_project/nodeSelector/move2worker00.sh'", shell=True)StrictHostKeyChecking=no 
     else:
         del COUNTGET[:]        
-
-    # if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
-    #     del COUNTGET[:]
-    #     subprocess.call("sshpass -p 'raspberry' ssh -T pi@192.168.31.232 './tfg_project/nodeSelector/move2worker01.sh'", shell=True)
 
 class HttpRequestCapture(object):
     def __init__(self, port=80, iface='en0', filter='tcp'):
