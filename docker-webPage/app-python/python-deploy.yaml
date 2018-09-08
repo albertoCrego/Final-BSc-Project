@@ -52,5 +52,5 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.serviceAccountName
-      nodeSelector:
-        tfg: "worker00"
+      # nodeSelector:
+      #   tfg: "worker00"
