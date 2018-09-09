@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: flask-python
-  type: NodePort
+  #type: NodePort
   ports:
    - port: 5000
      targetPort: 5000
