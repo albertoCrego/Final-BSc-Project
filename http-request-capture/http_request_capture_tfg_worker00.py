@@ -25,8 +25,7 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         del COUNTGET[:]
-        subprocess.call("ssh -o StrictHostKeyChecking=no master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker00.sh'", shell=True)     
-        #subprocess.call("ssh StrictHostKeyChecking=no pi@192.168.31.232  './tfg_project/nodeSelector/move2worker00.sh'", shell=True)StrictHostKeyChecking=no 
+        subprocess.call("sshpass -p 'raspberry' ssh -o StrictHostKeyChecking=no master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker00.sh'", shell=True)     
     else:
         del COUNTGET[:]        
 
