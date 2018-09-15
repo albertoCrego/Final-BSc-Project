@@ -4,7 +4,7 @@ metadata:
   name: web-nginx
   labels:
     app: nginx
-    name: flask-python
+    name: nginx
     visualize: "true"
 #  namespace: tfg
 spec:
@@ -16,7 +16,7 @@ spec:
     metadata:
       labels:
         app: nginx
-        name: flask-python
+        name: nginx
         visualize: "true"
     spec:
       containers:
