@@ -56,5 +56,18 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: spec.serviceAccountName
+        - name: liveness
+          image: k8s.gcr.io/busybox
+          args:
+          - /bin/sh
+          - -c
+          - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+          livenessProbe:
+            exec:
+              command:
+              - cat
+              - /tmp/healthy
+            initialDelaySeconds: 5
+            periodSeconds: 5        
       # nodeSelector:
       #   tfg: "worker00"
