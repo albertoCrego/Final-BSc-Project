@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: web-nginx
   labels:
-    run: web-service
-    name: flask-python
+    run: web-nginx
+    name: web-nginx
     visualize: "true"
 #  namespace: tfg      
 spec:
