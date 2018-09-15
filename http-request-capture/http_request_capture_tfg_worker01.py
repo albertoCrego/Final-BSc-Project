@@ -21,11 +21,11 @@ def printit():
   threading.Timer(5.0, printit).start()
 
   if (len(COUNTGET) == 0):
-    print "Lista vacia"
+    print "Sin actividad"
   else:
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         del COUNTGET[:]
-        subprocess.call("sshpass -p 'raspberry' ssh -o StrictHostKeyChecking=no master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
+        subprocess.call("ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
     else:
         del COUNTGET[:]
 

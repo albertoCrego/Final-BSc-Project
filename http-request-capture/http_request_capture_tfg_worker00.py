@@ -21,7 +21,7 @@ def printit():
   threading.Timer(5.0, printit).start()
 
   if (len(COUNTGET) == 0):
-    print "Lista vacia"
+    print "Sin actividad"
   else:
     if (COUNTGET.count('192.168.31.112:30080/get-ip') > 5):
         del COUNTGET[:]
