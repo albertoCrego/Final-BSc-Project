@@ -25,7 +25,7 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         del COUNTGET[:]
-        subprocess.call("ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
+        subprocess.call("sshpass -e ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
     else:
         del COUNTGET[:]
 
