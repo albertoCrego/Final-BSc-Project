@@ -4,7 +4,7 @@
 import os
 import time
 import threading
-import  subprocess 
+import subprocess 
 from datetime import datetime
 from scapy.all import TCP, IP, sniff, Raw
 from logger import log
@@ -25,7 +25,9 @@ def printit():
   else:
     if (COUNTGET.count('192.168.31.102:30080/get-ip') > 5):
         del COUNTGET[:]
-        subprocess.call("sshpass -e ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
+	#subprocess.call("sshpass -p 'raspberry' ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)     
+	subprocess.call("sshpass -f /home/worker01/Documents/sshpassword ssh master@192.168.31.232 './Documents/tfg_project/nodeSelector/move2worker01.sh'", shell=True)
+
     else:
         del COUNTGET[:]
 
