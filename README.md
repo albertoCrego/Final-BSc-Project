@@ -1,4 +1,4 @@
-﻿
+
 ## Resumen del trabajo:
 
 > El desarrollo de este trabajo de final de grado analiza, define e implementa una simulación propuesta para un nuevo paradigma dentro de las telecomunicaciones, denominado como Fog Computing.
@@ -22,4 +22,3 @@
 
 
 Alberto Crego Matas - Grado en Ingenería de Telecomunicaciones / Telemática
-
