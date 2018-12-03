@@ -1,3 +1,7 @@
+## Overview
+> The development of this final degree project analyzes, defines and implements a simulation for a new paradigm in telecommunications, known as Fog Computing.  
+> This idea tries to bring applications closer the final users, based on three ideas: the microservices architecture, software that allows them to be orchestrated and 5G networks that have new technical characteristics.  
+> This BSc thesis will focus on the simulation of the software part, its implementation, and deployment, demonstrating advantages in domestic environments and its potential power in a later development of complex architectures of a productive environment. 
 
 ## Resumen del trabajo:
 
