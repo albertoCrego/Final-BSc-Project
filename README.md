@@ -9,10 +9,10 @@
 > Esta idea trata de acercar las aplicaciones finales a los consumidores,basado en tres ideas: la arquitectura de microservicios, un software que permita orquestarlos y las redes de 5G que tienen nuevas características técnicas. Este TFG, se centrará en la simulación de la parte software, su implementación y despliegue, demostrando ventajas en entornos domésticos y su posible potencia en un posterior desarrollo de arquitecturas complejas.
 > Explicación de los documentos y ficheros usados para la ejecución del TFG:
 
-## Demostración
+## Demonstration
 > https://www.youtube.com/watch?v=t9cPSp5NfcA&feature=youtu.be
 
-## Ficheros
+## Files
 
 >  -  **docker-webPage** Incluye los ficheros de despliegue y dos scripts de automatización, uno para eliminarlos todos y otro para crearlos:
 > -- **app-python:** Fichero de aplicación `app.py` con el script de la página web. Dockerfile para la creación del contenedor y basado en una imagen especifica de ARM (para su uso en RPi). Dos YAML de despliegue uno para aplicaciones en AMD64 y otro para aplicacicones en ARM. Por último un YAML con un objeto Service para definir
