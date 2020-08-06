@@ -1,3 +1,5 @@
+![image](./draw.io/Cluster_RPi_On-Premise.jpg)
+
 ## Overview
 > The development of this final degree project analyzes, defines and implements a simulation for a new paradigm in telecommunications, known as Fog Computing.  
 > This idea tries to bring applications closer the final users, based on three ideas: the microservices architecture, software that allows them to be orchestrated and 5G networks that have new technical characteristics.  
